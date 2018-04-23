@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>纵向的导航栏</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    ul li {
+      width: 100px; /*设置项(li)的宽度*/
+      height: 30px; /*设置项的高度*/
+      list-style: none; /*清除列表样式*/
+      line-height: 30px; /*设置行高*/
+      margin-bottom: 1px; /*项的间隔*/
+      text-align: center; /*设置文本居中*/
+    }
+    
+    ul li a {
+      text-decoration: none; /*清除下划线*/
+      display: block; /*将行内元素转换为块元素*/
+      font-size: 14px; /*字体大小*/
+      color: #ffcc00; /*文本颜色*/
+      background-color: #000066; /*背景色*/
+      /*设置边框效果*/
+      border-left-color: #ff9900;
+      border-left-width: 10px;
+      border-left-style: solid; /*固定边框*/
+    }
+
+    /* ul 的子元素 li 的子元素 a 的事件(:hover 鼠标悬停)*/
+    ul li a:hover {
+      color: #ffffff; /*白色*/
+      background-color: #000000; /*黑色*/
+      /*设置边框效果*/
+      border-left-color: #d8d803;
+      border-left-width: 15px;
+      border-left-style: solid; /*固定边框*/
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a href="../ch01/index.html">我的首页</a></li>
+    <li><a href="../ch02/index.html">心情日记</a></li>
+    <li><a href="../ch02/demo.html">学习心得</a></li>
+    <li><a href="../ch03/blogtop.html">工作笔记</a></li>
+    <li><a href="../ch03/flowershop.html">生活琐碎</a></li>
+    <li><a href="#">联系我们</a></li>
+  </ul>
+</body>
+</html>

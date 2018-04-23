@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>css</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <!--2.内部样式: 当前网页有效-->
+  <style>
+    /*标签选择器: 只对同一标签名有效*/
+    /*
+    div {
+      margin-left: 20px;
+    }*/
+
+    /*类 class 选择器: 同一类,不同标签有效*/
+    .ml {
+      margin-left: 20px;
+      background-color: cornflowerblue;
+    }
+  </style>
+  <!-- 3.链接样式表=外部样式: 引用外部样式,可重用 (推荐)-->
+  <link rel="stylesheet" href="xxx.css">
+</head>
+<body>
+  <h3>css:层叠样式表</h3>
+
+  <!-- 样式标签标签越近越严格 -->
+  <!-- 1.行内样式表: 当前标签 style 有效-->
+  <div class="ml"
+  style="color: blue;background-color: crimson;width: 400px;height: 300px;">块</div>
+
+  <div class="ml">层</div>
+
+  <p class="ml">段落</p>
+</body>
+</html>

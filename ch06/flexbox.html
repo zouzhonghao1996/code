@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flexbox Demo</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    /* flexbox 是在 css3 中新的布局模式 (IE11+)*/
+    .flex-container {
+      display: flex; /*显示的方式: flex*/
+      flex-flow: row wrap; /*布局模式: 行 包裹内容*/
+      text-align: center;
+    }
+
+    .flex-container > * {
+      padding: 15px;
+      flex: 1 100%;
+    }
+
+    .article {
+      text-align: center;
+    }
+
+    header {
+      background-color: black;
+      color: white;
+    }
+
+    footer {
+      background-color: #aaa;
+      color: white;
+    }
+
+    .nav {
+      background-color: #eee;
+    }
+
+    .nav ul {
+      list-style-type: none;
+      padding: 0px;
+    }
+
+    .nav ul a {
+      text-decoration: none;
+    }
+
+    /*自适配宽度*/
+    @media all and (min-width: 768px) {
+      .nav {
+        text-align: left;
+        flex: 1 auto;
+        order: 1; /*出现顺序*/
+      }
+
+      .article {
+        flex: 5 0px;
+        order: 2;
+      }
+
+      footer {
+        order: 3;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex-container">
+    <!-- 网页内容的顶部(头部) 上-->
+    <header>
+      <h1>City Gallery</h1>
+    </header>
+
+    <!-- 网页内容的导航 中左-->
+    <nav class="nav">
+      <ul>
+        <li><a href="#">London</a></li>
+        <li><a href="#">Paris</a></li>
+        <li><a href="#">Tokyo</a></li>
+        <li><a href="#">NewYork</a></li>
+      </ul>
+    </nav>
+
+    <!-- 网页内容的主要部分 中右-->
+    <article class="article">
+      <h1 id="h1">London</h1>
+      <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+
+      <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+
+      <p>Resize this page to see that what happens!&nbsp;&nbsp;&nbsp; ...</p>
+    </article>
+
+    <!-- 网页内容的底部(显示公司的版权信息) 下
+    &copy; 版权 &nbsp; 空格 &lt; < &gt; >
+    -->
+    <footer>
+      Copyright &copy; Newer.com 版权所有 违者必究
+    </footer>
+  </div>
+</body>
+
+</html>

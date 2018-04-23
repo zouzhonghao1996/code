@@ -1,0 +1,66 @@
+
+/*
+.html 是网页文件
+.css 是层叠样式文件
+*/
+
+/*设置样式文件的字符编码*/
+@charset "utf-8";
+
+body {
+  background-color: #00ccff;
+}
+
+/*去掉默认的边框*/
+h3, ul {
+  padding: 0px; /*内边距*/
+  margin: 0px; /*外边距*/
+}
+
+/* id 选择器*/
+#div1 {
+  width: 400px;
+  background-color: #ff3366;
+  font-size: 12px; /*默认字体大小 16px*/
+  padding: 10px;
+}
+
+/*div1 下的 ul 标签*/
+#div1 ul{
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none; /*none 无 disc 实心圆 square 方 decimal 数字 | 空心圆*/
+  list-style-image: url('../img/icon.gif');
+  list-style-position: inside; /*位置*/
+}
+
+#div1 li {
+  margin: 5px 0px;
+}
+
+span {
+  color: #ffffff;
+  margin-left: 20px;
+}
+
+#div2 {
+  width: 400px;
+  background-color: #ffcc66;
+  font-size: 12px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+#div2 ul {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+  list-style-image: url('../img/icon1.gif');
+  list-style-position: inside;
+}
+
+#div2 li {
+  /* 底边框: 粗细 虚线*/
+  border-bottom: 1px dashed #666666;
+  margin: 12px 0px 0px 0px; /*上右下左*/
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>纯 CSS 下拉菜单</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    /*设置全局样式*/
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    li {
+      list-style: none;
+      text-align: center;
+      line-height: 24px;
+      width: 120px;
+      float: left; /*浮于左边 (后面的列表在第一个的右边)*/
+      border: 1px #333 dashed; /*边框粗细 颜色 虚线*/
+      background-color: #ffd2de;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333333;
+      font-size: 14px;
+      line-height: 24px;
+      display: block; /*块元素*/
+    }
+
+    .nav ul li ul {
+      display: none; /*隐藏子菜单*/
+    }
+
+    .nav ul li a:hover {
+      color: #ffffff;
+      background-color: #bb0916;
+    }
+
+    /*主菜单悬停时展开子菜单*/
+    .nav ul li:hover ul, .nav ul li a:hover ul {
+      display: block; /*显示隐藏的子菜单*/
+      width: 120px;
+      height: 24px;
+    }
+
+    /*子菜单的样式*/
+    .nav ul li ul li {
+      background-color: #fee;
+      width: 120px;
+    }
+
+    /*子菜单悬停*/
+    .nav ul li ul a:hover {
+      color: #666666;
+      background-color: #f7f7b9;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <ul>
+      <li>
+        <a href="#">首页</a>
+        <ul>
+          <li><a href="#">最新更新</a></li>
+          <li><a href="#">下载排行</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">企业新闻</a>
+        <ul>
+          <li><a href="#">企业介绍</a></li>
+          <li><a href="#">最新动态</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">产品信息</a>
+        <ul>
+          <li><a href="#">产品列表</a></li>
+          <li><a href="#">最新产品</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">特价促销</a>
+        <ul>
+          <li><a href="#">最新促销</a></li>
+          <li><a href="#">特价</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">联系我们</a>
+        <ul>
+          <li><a href="#">公司信息</a></li>
+          <li><a href="#">公司地图</a></li>
+          <li><a href="#">联系我们</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">新手论坛</a>
+        <ul>
+          <li><a href="#">你问我答</a></li>
+          <li><a href="#">网站大学堂</a></li>
+          <li><a href="#">论坛</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+
+@charset "utf-8";
+
+/* 标签选择器*/
+body {
+  font-size: 14px; /* 默认字号 16px*/
+  background-color: #ffe5e5;
+}
+
+h1 {
+  text-align: center;
+  font-size: 42px;
+  font-family: '宋体';
+  color: #9d3151;
+}
+
+/* id 选择器*/
+#link1 {
+  text-align: center;
+}
+
+#link1 a {
+  color: #de4eaf;
+  text-decoration: none; /*清除下划线*/
+  margin-right: 35px; /*右外边距间隔*/
+}
+
+#bg {
+  background-color: #b3375c;
+  color: #fff;
+  padding: 10px; /*内边距*/
+}
+
+#bg  img {
+  float: left; /*图片浮动居左*/
+  margin: 10px;
+}
+
+/* 类选择器*/
+.p1 {
+  text-decoration: underline; /* 装饰下划线*/
+  font-style: oblique; /*倾斜 */
+  color: #ff9;
+}
